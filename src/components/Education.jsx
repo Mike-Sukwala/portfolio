@@ -5,41 +5,28 @@ const Education = () => {
   const educationData = [
     {
       id: 1,
-      title: "BACHELOR OF EDUCATION COMPUTER SCIENCE(WITH CREDIT)",
-      institution: "UNIVERSITY OF MALAWI",
-      year: "2021-2025",
+      title: "Computer Science Education Degree",
+      institution: "University of Malawi",
+      year: "2025 - Present",
       icon: <FaGraduationCap />,
       description: "Focusing on software development, algorithms, and educational technology"
     },
-
     {
       id: 2,
-      title: " CERTIFICATE IN CYBER SECURITY ",
-      institution: "CISCO NETWORKING ACADEMY",
-      year: "2025-2026",
-      icon: <FaSchool />,
-      description: "knowledge of cybersecurity, including the global implications of cyber threats on industries,vulnerabilities and threat detection and defense"
-       
-    },
-
-    {
-      id: 3,
-      title: "CERTIFICATE IN IT CUSTOMER SUPPORT BASICS ",
-      institution: "CISCO NETWORKING ACADEMY",
-      year: "2026",
-      icon: <FaCertificate />,
-      description: "foundational knowledge in help desk operations, customer service, and remote troubleshooting using industry-standard tools to assist users in resolving technical issues and can effectively communicate technical concepts to non-technical users."
-
-    },
-    {
-      id: 4,
-      title: " INFORMATION COMMUNICATION TECHNOLOGY CERTIFICATE(TEVETA)",
-      institution: " AIDA CHILEMBWE TECHNICAL COLLEGE",
+      title: "Information Communication Technology Certificate",
+      institution: "Aida Chilembwe Technical College",
       year: "2019 - 2020",
       icon: <FaCertificate />,
       description: "Comprehensive training in networking, hardware, and software applications"
     },
-    
+    {
+      id: 3,
+      title: "MSCE - Malawi School Certificate of Education",
+      institution: "Malawi School Certificate",
+      year: "2019",
+      icon: <FaSchool />,
+       
+    }
   ];
 
   return (

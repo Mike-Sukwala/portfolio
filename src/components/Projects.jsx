@@ -1,10 +1,14 @@
-// Projects.jsx
 import { useState } from 'react';
 import { 
-  FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, 
-  FaDatabase, FaMobile, FaChartLine, FaCode 
+  FaGithub, 
+  FaExternalLinkAlt,
+  FaReact,
+  FaNodeJs,
+  FaDatabase,
+  FaMobile
 } from 'react-icons/fa';
-import { SiTailwindcss, SiNestjs, SiLaravel } from 'react-icons/si';
+import { SiLaravel, SiTailwindcss, SiFlutter, SiFirebase } from 'react-icons/si';
+ 
 
 const Projects = () => {
   const [filter, setFilter] = useState('all');
@@ -12,46 +16,51 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Portfolio ",
-      description: "A modern, responsive portfolio website showcasing my work and skills. Features smooth animations, dark mode, and interactive components.",
-      technologies: ["React", "TailwindCSS", "Framer Motion"],
-      icons: [<FaReact />, <SiTailwindcss />, <FaCode />],
-      
+      title: "Portfolio Website",
+      description: "A modern, responsive portfolio website showcasing professional work and technical skills with interactive components and seamless user experience.",
+      technologies: ["React", "TailwindCSS"],
+      techIcons: [<FaReact />, <SiTailwindcss />],
+      category: "web",
+      featured: true,
+      emoji: "🚀"
     },
-    
+    {
+      id: 2,
+      title: "Essay Grade Mobile App",
+      description: "AI-powered mobile application for automated essay grading and feedback generation.",
+      technologies: ["React Native", "Node.js"],
+      techIcons: [<FaMobile />, <FaNodeJs />],
+      category: "mobile",
+      featured: false,
+      emoji: "📝"
+    },
     {
       id: 3,
-      title: "Essay Grade Mobile app",
-      description: "AN AI powered Mobile application for grading Essays.",
-      technologies: ["React", "Node.js", "Chart.js"],
-      icons: [<FaReact />, <FaNodeJs />, <FaChartLine />],
-       
+      title: "Chikanda Accommodation Finder",
+      description: "A comprehensive accommodation discovery platform designed specifically for University of Malawi students.",
+      technologies: ["Laravel", "MySQL", "React"],
+      techIcons: [<SiLaravel />, <FaDatabase />, <FaReact />],
+      category: "fullstack",
+      featured: false,
+      emoji: "🏠"
     },
     {
       id: 4,
-      title: "Chikanda Accomodation finder",
-      description: " its a group project for finding accomodation mainly for university of malawi students",
-      technologies: ["Laravel", "MySQL", "React js"],
-      icons: [<SiLaravel />, <FaDatabase />, <SiTailwindcss />],
-      
-    },
-     
-    {
-      id: 6,
       title: "TestMate Mobile App",
-      description: "Administering Examinations Online",
+      description: "A secure mobile examination administration platform for educational institutions.",
       technologies: ["Flutter", "Firebase"],
-      icons: [<FaMobile />, <FaNodeJs />, <FaDatabase />],
-      
+      techIcons: [<SiFlutter />, <SiFirebase />],
+      category: "mobile",
+      featured: false,
+      emoji: "📱"
     }
   ];
 
   const categories = [
     { id: 'all', name: 'All Projects', count: projects.length },
-    { id: 'web', name: 'Web Apps', count: projects.filter(p => p.category === 'web').length },
-    { id: 'fullstack', name: 'Full Stack', count: projects.filter(p => p.category === 'fullstack').length },
-    { id: 'mobile', name: 'Mobile', count: projects.filter(p => p.category === 'mobile').length },
-    { id: 'enterprise', name: 'Enterprise', count: projects.filter(p => p.category === 'enterprise').length }
+    { id: 'web', name: 'Web Applications', count: projects.filter(p => p.category === 'web').length },
+    { id: 'fullstack', name: 'Full Stack Solutions', count: projects.filter(p => p.category === 'fullstack').length },
+    { id: 'mobile', name: 'Mobile Applications', count: projects.filter(p => p.category === 'mobile').length }
   ];
 
   const filteredProjects = filter === 'all' 
@@ -62,10 +71,12 @@ const Projects = () => {
     <section id="projects" className="projects-section">
       <div className="projects-container">
         <div className="section-header">
-          <span className="section-tag">My Work</span>
-          <h2 className="section-title">Featured <span className="gradient-text">Projects</span></h2>
+          <span className="section-tag">Portfolio</span>
+          <h2 className="section-title">
+            Professional <span className="gradient-text">Projects</span>
+          </h2>
           <p className="section-subtitle">
-            A collection of my best work, showcasing my skills and passion for development
+            A curated selection of projects demonstrating technical expertise and problem-solving capabilities
           </p>
         </div>
 
@@ -83,52 +94,46 @@ const Projects = () => {
         </div>
 
         <div className="projects-grid">
-          {filteredProjects.map((project, index) => (
-            <div key={project.id} className="project-card" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="project-image">
-                <div className="project-emoji">{project.image}</div>
-                {project.featured && (
-                  <div className="featured-badge">
-                    <span className="featured-star">⭐</span>
-                    Featured
-                  </div>
-                )}
-              </div>
-              <div className="project-content">
-                <div className="project-tech-icons">
-                  {project.icons.map((icon, i) => (
-                    <span key={i} className="tech-icon">
-                      {icon}
-                    </span>
-                  ))}
+          {filteredProjects.length > 0 ? (
+            filteredProjects.map((project, index) => (
+              <div 
+                key={project.id} 
+                className="project-card" 
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="project-image">
+                  <span className="project-emoji">{project.emoji}</span>
+                  {project.featured && (
+                    <div className="featured-badge">
+                      <span className="star">⭐</span>
+                      Featured
+                    </div>
+                  )}
                 </div>
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-tech-stack">
-                  {project.technologies.map((tech, i) => (
-                    <span key={i} className="tech-tag">{tech}</span>
-                  ))}
-                </div>
-                <div className="project-links">
-                  <a href={project.github} className="project-link" target="_blank" rel="noopener noreferrer">
-                    <FaGithub />
-                    Code
-                  </a>
-                  <a href={project.demo} className="project-link primary" target="_blank" rel="noopener noreferrer">
-                    <FaExternalLinkAlt />
-                    Live Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        <div className="projects-cta">
-          <a href="https://github.com/mike" className="btn-primary" target="_blank" rel="noopener noreferrer">
-            <FaGithub />
-            View More on GitHub
-          </a>
+                <div className="project-content">
+                  <div className="project-tech-icons">
+                    {project.techIcons.map((icon, i) => (
+                      <span key={i} className="tech-icon">{icon}</span>
+                    ))}
+                  </div>
+
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+
+                  <div className="project-tech-stack">
+                    {project.technologies.map((tech, i) => (
+                      <span key={i} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="no-projects">
+              <p>No projects found in this category.</p>
+            </div>
+          )}
         </div>
       </div>
     </section>
@@ -136,6 +141,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-
-

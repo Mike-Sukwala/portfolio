@@ -28,7 +28,7 @@ export default function Contact() {
     {
       icon: <FaPhone />,
       title: "Phone",
-      info: "+265 6383294",
+      info: "+265 886383294",
       link: "tel:+265 990185236",
       color: "#f97316"
     },
