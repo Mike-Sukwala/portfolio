@@ -21,18 +21,18 @@ const Projects = () => {
       technologies: ["React", "TailwindCSS"],
       techIcons: [<FaReact />, <SiTailwindcss />],
       category: "web",
-      featured: true,
-      emoji: "🚀"
+       
+       
     },
     {
       id: 2,
-      title: "Essay Grade Mobile App",
+      title: "Essay Grader Mobile Application",
       description: "AI-powered mobile application for automated essay grading and feedback generation.",
       technologies: ["React Native", "Node.js"],
       techIcons: [<FaMobile />, <FaNodeJs />],
       category: "mobile",
-      featured: false,
-      emoji: "📝"
+       
+       
     },
     {
       id: 3,
@@ -41,8 +41,8 @@ const Projects = () => {
       technologies: ["Laravel", "MySQL", "React"],
       techIcons: [<SiLaravel />, <FaDatabase />, <FaReact />],
       category: "fullstack",
-      featured: false,
-      emoji: "🏠"
+       
+      
     },
     {
       id: 4,
@@ -51,8 +51,8 @@ const Projects = () => {
       technologies: ["Flutter", "Firebase"],
       techIcons: [<SiFlutter />, <SiFirebase />],
       category: "mobile",
-      featured: false,
-      emoji: "📱"
+       
+       
     }
   ];
 
@@ -73,7 +73,7 @@ const Projects = () => {
         <div className="section-header">
           <span className="section-tag">Portfolio</span>
           <h2 className="section-title">
-            Professional <span className="gradient-text">Projects</span>
+             Selected <span className="gradient-text">Projects</span>
           </h2>
           <p className="section-subtitle">
             A curated selection of projects demonstrating technical expertise and problem-solving capabilities

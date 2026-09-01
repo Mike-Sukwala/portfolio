@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { FaMoon, FaSun, FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa';
+ 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -15,15 +15,10 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    if (isDark) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.removeAttribute('data-theme');
-    }
-  }, [isDark]);
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  const toggleTheme = () => setIsDark(!isDark);
 
   return (
     <header className={`header ${scrolled ? 'scrolled' : ''}`}>
@@ -58,17 +53,9 @@ const Header = () => {
               <span className="nav-number">05.</span> Contact
             </a>
           </li>
-          <li className="mobile-theme-toggle">
-            <button className="theme-toggle" onClick={toggleTheme}>
-              {isDark ? <FaSun /> : <FaMoon />}
-            </button>
-          </li>
         </ul>
 
         <div className="nav-actions">
-          <button className="theme-toggle desktop" onClick={toggleTheme}>
-            {isDark ? <FaSun /> : <FaMoon />}
-          </button>
           <button className="hamburger" onClick={toggleMenu}>
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
