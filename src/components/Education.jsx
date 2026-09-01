@@ -21,9 +21,9 @@ const Education = () => {
     },
     {
       id: 3,
-      title: "MSCE - Malawi School Certificate of Education",
-      institution: "Malawi School Certificate",
-      year: "2019",
+      title: "INTRODUCTION TO CYBER SECURITY",
+      institution: "CISCO NETWORKING ACADEMY",
+      year: "2026",
       icon: <FaSchool />,
        
     }
