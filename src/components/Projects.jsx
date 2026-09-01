@@ -16,35 +16,16 @@ const Projects = () => {
       description: "A modern, responsive portfolio website showcasing my work and skills. Features smooth animations, dark mode, and interactive components.",
       technologies: ["React", "TailwindCSS", "Framer Motion"],
       icons: [<FaReact />, <SiTailwindcss />, <FaCode />],
-      github: "https://github.com/mike/portfolio",
-      demo: "https://mike.dev",
-      category: "web",
-      image: "🎨",
-      featured: true
+      
     },
-    {
-      id: 2,
-      title: "TaskFlow - Todo App",
-      description: "A full-featured task management application with drag-and-drop functionality, due dates, categories, and real-time updates.",
-      technologies: ["React", "NestJS", "PostgreSQL"],
-      icons: [<FaReact />, <SiNestjs />, <FaDatabase />],
-      github: "https://github.com/mike/taskflow",
-      demo: "https://taskflow.dev",
-      category: "web",
-      image: "✅",
-      featured: true
-    },
+    
     {
       id: 3,
       title: "Essay Grade Mobile app",
       description: "AN AI powered Mobile application for grading Essays.",
       technologies: ["React", "Node.js", "Chart.js"],
       icons: [<FaReact />, <FaNodeJs />, <FaChartLine />],
-      github: "https://github.com/mike/weatherwise",
-      demo: "https://weatherwise.dev",
-      category: "web",
-      image: "🌤️",
-      featured: false
+       
     },
     {
       id: 4,
@@ -52,33 +33,16 @@ const Projects = () => {
       description: " its a group project for finding accomodation mainly for university of malawi students",
       technologies: ["Laravel", "MySQL", "React js"],
       icons: [<SiLaravel />, <FaDatabase />, <SiTailwindcss />],
-      github: "https://github.com/mike/ecommerce",
-      demo: "https://shop.dev",
-      category: "fullstack",
-      image: "🛒",
-      featured: true
+      
     },
-    {
-      id: 5,
-      title: "HealthTrack System",
-      description: "DHIS2-based health information management system for tracking patient data and generating analytics reports.",
-      technologies: ["DHIS2", "JavaScript", "PostgreSQL"],
-      icons: [<FaCode />, <FaDatabase />, <FaChartLine />],
-      github: "https://github.com/mike/healthtrack",
-      demo: "https://healthtrack.dev",
-      category: "enterprise",
-      image: "🏥",
-      featured: false
-    },
+     
     {
       id: 6,
       title: "TestMate Mobile App",
       description: "Administering Examinations Online",
       technologies: ["Flutter", "Firebase"],
       icons: [<FaMobile />, <FaNodeJs />, <FaDatabase />],
-      category: "mobile",
-      image: "💰",
-      featured: true
+      
     }
   ];
 

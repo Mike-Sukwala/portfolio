@@ -14,7 +14,7 @@ const Education = () => {
 
     {
       id: 2,
-      title: "INTRODUCTION TO CYBER SECURITY CERTIFICATE",
+      title: " CERTIFICATE IN CYBER SECURITY ",
       institution: "CISCO NETWORKING ACADEMY",
       year: "2025-2026",
       icon: <FaSchool />,
